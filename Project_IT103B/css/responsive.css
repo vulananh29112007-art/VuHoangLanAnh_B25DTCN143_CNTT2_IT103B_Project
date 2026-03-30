@@ -1,0 +1,191 @@
+/* RESPONSIVE LOGIN */
+@media (max-width: 1024px) {
+    .container {
+        gap: 60px;
+    }
+
+    .images img {
+        width: 320px;
+        height: auto;
+    }
+
+    .login {
+        width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px 20px;
+    }
+
+    .images img {
+        width: 260px;
+        height: auto;
+    }
+
+    .login {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+/* Footer text */
+.footer-text {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+}
+
+.footer-text a {
+    color: #ff4d4d;
+    text-decoration: none;
+}
+
+
+
+/* register */
+
+/* ===== TABLET ===== */
+@media (max-width: 1024px) {
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 25px;
+    }
+
+    /* KHÔNG ẨN nữa */
+    .content-left {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .content-left h1 {
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+    }
+
+    .content-left p {
+        font-size: 0.9rem;
+    }
+
+    .form-card {
+        width: 90%;
+        max-width: 420px;
+    }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .wrapper {
+        width: 100%;
+        gap: 20px;
+    }
+
+    /* chữ nhỏ lại */
+    .content-left h1 {
+        font-size: 1.8rem;
+        line-height: 1.3;
+    }
+
+    .content-left p {
+        font-size: 0.8rem;
+    }
+
+    .form-card {
+        padding: 25px;
+        border-radius: 6px;
+    }
+
+    /* input xuống dọc */
+    .row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .input-box {
+        margin-bottom: 15px;
+    }
+
+    .input-box input {
+        padding: 9px;
+        font-size: 14px;
+    }
+
+    #signup-submit {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .footer-text {
+        font-size: 13px;
+        text-align: center;
+    }
+}
+
+/* ===== SMALL MOBILE ===== */
+@media (max-width: 400px) {
+    .content-left h1 {
+        font-size: 1.5rem;
+    }
+
+    .content-left p {
+        font-size: 0.75rem;
+    }
+
+    .form-card {
+        padding: 20px;
+    }
+}
+
+/* index reponsive */
+/* ================= RESPONSIVE 1024 ================= */
+@media (max-width: 1024px) {
+    .blog-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ================= RESPONSIVE 768 ================= */
+@media (max-width: 768px) {
+    .banner-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .blog-list {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+    }
+
+    .btnaction {
+        justify-content: center;
+    }
+}
