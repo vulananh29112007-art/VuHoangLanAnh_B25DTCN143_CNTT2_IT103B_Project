@@ -7,6 +7,7 @@
     <title>Add Article</title>
     <link rel="stylesheet" href="../css/form.css">
     <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 
 <body>
@@ -17,7 +18,9 @@
 
             <div class="modal-header">
                 <h2>📝 Add New Article</h2>
-                <span class="close-btn" id="closeBtn">&times;</span>
+                <span class="close-btn" id="closeBtn">
+                    <a href="../index.html"><i class="fa-regular fa-circle-xmark" style="color: rgb(5, 5, 5);"></i></a>
+                </span>
             </div>
 
             <form id="articleForm">
@@ -30,9 +33,13 @@
 
                 <label>Mood:</label>
                 <select id="mood">
-                    <option>😊 Happy</option>
-                    <option>😢 Sad</option>
-                    <option>😎 Cool</option>
+                    <option value="happy">😊 Happy</option>
+                    <option value="sad">😢 Sad</option>
+                    <option value="cool">😎 Cool</option>
+                    <option value="sick">🤒 Sick</option>
+                    <option value="thinking">🤔 Thinking</option>
+                    <option value="crying">😭 Crying</option>
+                    <option value="sleepy">🥱 Sleepy</option>
                 </select>
 
                 <label>Content:</label>
@@ -53,7 +60,9 @@
                 </div>
 
                 <div class="upload-box">
-                    <p>📤 Browse and choose the files you want<br>to upload from your computer</p>
+                    <img src="../assets/images/upload.png">
+                    <br><br>
+                    <p>Browse and choose the files you want to upload from your computer</p>
                 </div>
 
                 <button type="submit" id="addBtn">Add</button>

@@ -88,16 +88,17 @@ header {
 /* TOP SECTION - Tiêu đề và nút thêm nằm hai đầu */
 .top-section {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start; /* Đẩy nội dung về bên trái */
     align-items: center;
     margin-bottom: 25px;
+    gap: 20px; /* Tạo khoảng cách giữa nút và tiêu đề */
 }
 
 .page-title {
-    font-size: 28px;
-    font-weight: 700;
-    color: #222;
+    flex: 1; /* Cho phép tiêu đề chiếm không gian để căn giữa */
+    text-align: center; /* Đặt tiêu đề ở giữa */
 }
+
 
 /* ADD BUTTON */
 .add-btn {
