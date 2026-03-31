@@ -51,11 +51,15 @@ body {
 }
 
 /* ================= TITLE ================= */
-h1 {
+#mainTitle {
+    display: block; 
     text-align: center;
     color: #0d6efd;
     margin: 35px 0 5px 0;
-    font-size:xx-large;
+    font-size: xx-large;
+    font-weight: bold;
+
+    text-decoration: none; 
 }
 
 /* ================= BLOG GRID ================= */
@@ -129,6 +133,34 @@ h1 {
     border-radius: 20px;
     cursor: pointer;
 }
+
+/* Phân trang */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+    gap: 10px;
+}
+
+.pagination a, .pagination span {
+    padding: 8px 12px;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #333;
+}
+
+.pagination a.active {
+    background-color: #a78bfa; /* màu tím nhạt giống hình */
+    color: white;
+    font-weight: bold;
+}
+
+.pagination a:hover {
+    background-color: #ddd;
+}
+
 
 /* ================= FOOTER ================= */
 .footer {
