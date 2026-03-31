@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #FFFFFF;
+}
+
+.banner {
+    width: 100%;
+}
+
+/* ================= HEADER ================= */
+.banner-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    gap: 20px;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.banner-row input {
+    flex: 1;
+    max-width: 500px;
+    height: 38px;
+    padding: 0 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btnaction {
+    display: flex;
+    gap: 10px;
+}
+
+.btnaction button {
+    width: 90px;
+    height: 36px;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* ================= TITLE ================= */
+#mainTitle {
+    display: block; 
+    text-align: center;
+    color: #0d6efd;
+    margin: 35px 0 5px 0;
+    font-size: xx-large;
+    font-weight: 500;
+    width: 25%;
+    text-decoration: none; 
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px auto;
+}
+
+/* ================= BLOG GRID ================= */
+.blog-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 40px;
+}
+
+.blog-card {
+    background: white;
+}
+
+.blog-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.blog-content {
+    padding: 15px;
+}
+
+
+.blog-content p:first-child {
+    font-size: 14px;
+    color: #6155F5;
+    margin-bottom: 10px;
+    font-weight: 550;
+}
+
+.date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.date h3 {
+    font-size: 20px;
+}
+
+.op {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.name-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name-blog-1 {
+    border: none;
+    color:#6155F5;
+    background: #F9F5FF;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+.name-blog-2 {
+    border: none;
+    color:#026AA2;
+    background: #F0F9FF;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+.name-blog-3 {
+    border: none;
+    color:#027A48;
+    background: #F9F5FF;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+.name-blog-4 {
+    border: none;
+    color:#026AA2;
+    background: #F9F5FF;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+.name-blog-5 {
+    border: none;
+    color:#6155F5;
+    background: #F9F5FF;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+.name-blog-6 {
+    border: none;
+    color:#026AA2;
+    background: #ECFDF3;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.edit {
+    border: none;
+    background: #F9F5FF;
+    color: red;
+    font-size: 12px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Phân trang */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+    gap: 10px;
+}
+
+.pagination a, .pagination span {
+    padding: 8px 12px;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #333;
+}
+
+.pagination a.active {
+    background-color: #a78bfa; /* màu tím nhạt giống hình */
+    color: white;
+    font-weight: bold;
+}
+
+.pagination a:hover {
+    background-color: #ddd;
+}
+
+
+/* ================= FOOTER ================= */
+.footer {
+    color: #18181B;
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding: 60px 40px;
+    margin-top: 60px;
+}
+
+.footer h1 {
+    color: #18181B;
+    text-align: left;
+}
+
+.footer a {
+    display: block;
+    color: #18181B;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.footer p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* ================= SOCIAL ================= */
+.linkto {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.linkto a {
+    color: #18181B;
+    margin: 0 12px;
+    font-size: 20px;
+}
+
+/* ================= RESPONSIVE 1024 ================= */
+@media (max-width: 1024px) {
+    .blog-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ================= RESPONSIVE 768 ================= */
+@media (max-width: 768px) {
+    .banner-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .blog-list {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+    }
+
+    .btnaction {
+        justify-content: center;
+    }
+}
