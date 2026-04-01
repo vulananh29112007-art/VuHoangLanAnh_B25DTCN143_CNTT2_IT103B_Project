@@ -121,77 +121,107 @@
         width: 100%;
     }
 }
+/* index */
+/* ==================== RESPONSIVE ==================== */
 
-
-
-/* index reponsive */
-/* ================= RESPONSIVE 1024 ================= */
+/* ===== TABLET ===== */
 @media (max-width: 1024px) {
-    .blog-list {
+
+    .recent-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .posts-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .footer {
+    .footer-main {
         grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
     }
 }
 
-/* ================= RESPONSIVE 768 ================= */
+
+/* ===== MOBILE ===== */
 @media (max-width: 768px) {
-    .banner-row {
+
+    /* HEADER */
+    .header {
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+    .search-bar {
+        order: 3;
+        width: 100%;
+        margin: 0;
+    }
+
+    /* RECENT POSTS */
+    .recent-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .post-card.large img {
+        height: 250px;
+    }
+
+    /* POSTS GRID */
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* SECTION HEADER */
+    .section-header {
         flex-direction: column;
-        align-items: stretch;
+        align-items: flex-start;
     }
 
-    .blog-list {
+    .categories {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .categories a {
+        margin: 0;
+    }
+
+    /* PAGINATION */
+    .pagination {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* FOOTER */
+    .footer-main {
         grid-template-columns: 1fr;
-    }
-
-    .footer {
-        grid-template-columns: 1fr;
-    }
-
-    .btnaction {
-        justify-content: center;
     }
 }
 
-/* form */
 
-/* Tablet */
-@media (max-width: 1024px) {
-    .modal {
-        width: 95%;
-        padding: 25px;
-    }
-}
+/* ===== SMALL MOBILE ===== */
+@media (max-width: 480px) {
 
-/* Mobile */
-@media (max-width: 600px) {
-    .modal {
-        padding: 20px;
-    }
-
-    .modal-header h2 {
+    .logo {
         font-size: 18px;
     }
 
-    form input,
-    form select,
-    form textarea {
+    .post-info h3 {
+        font-size: 18px;
+    }
+
+    .post-info p {
         font-size: 14px;
-        padding: 8px;
     }
 
-    .status div {
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    #addBtn {
-        width: 100%;
+    .footer {
+        padding: 50px 20px;
     }
 }
+
+
 
 /* user manager */
 
@@ -489,101 +519,179 @@
 
 
 /* after login */
-/* ==================== RESPONSIVE ==================== */
-
-/* ===== TABLET ===== */
-@media (max-width: 1024px) {
-
-    .recent-grid {
-        grid-template-columns: 1fr;
+/* ==================== RESPONSIVE 1024px ==================== */
+@media screen and (max-width: 1024px) {
+    .header {
+        padding: 15px 20px;
+        gap: 20px;
     }
 
-    .posts-grid {
+    .search-bar {
+        max-width: 500px;
+    }
+
+    .blog-list {
         grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        padding: 30px;
+    }
+
+    .pagination {
+        gap: 100px;
+        flex-wrap: wrap;
     }
 
     .footer-main {
         grid-template-columns: repeat(2, 1fr);
         gap: 30px;
     }
+
+    #mainTitle {
+        width: 50%;
+        font-size: 28px;
+    }
 }
 
-
-/* ===== MOBILE ===== */
-@media (max-width: 768px) {
-
-    /* HEADER */
+/* ==================== RESPONSIVE 768px ==================== */
+@media screen and (max-width: 768px) {
     .header {
         flex-wrap: wrap;
+        justify-content: center;
         gap: 15px;
-        padding: 15px 20px;
+        padding: 15px;
+    }
+
+    .logo {
+        width: 100%;
+        text-align: center;
     }
 
     .search-bar {
-        order: 3;
         width: 100%;
+        max-width: 100%;
         margin: 0;
     }
 
-    /* RECENT POSTS */
-    .recent-grid {
+    .search-bar button{
+        display: none;
+    }
+
+    .user-profile {
+        margin-top: 10px;
+    }
+
+    .blog-list {
         grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 20px;
     }
 
-    .post-card.large img {
-        height: 250px;
+    .blog-card img {
+        height: auto;
     }
 
-    /* POSTS GRID */
-    .posts-grid {
-        grid-template-columns: 1fr;
-    }
-
-    /* SECTION HEADER */
-    .section-header {
+    .name-content {
         flex-direction: column;
         align-items: flex-start;
-    }
-
-    .categories {
-        display: flex;
-        flex-wrap: wrap;
         gap: 10px;
     }
 
-    .categories a {
-        margin: 0;
-    }
-
-    /* PAGINATION */
     .pagination {
         flex-direction: column;
-        gap: 10px;
+        gap: 20px;
     }
 
-    /* FOOTER */
+    .page-numbers {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
     .footer-main {
         grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-social {
+        flex-wrap: wrap;
+    }
+
+    #mainTitle {
+        width: 70%;
+        font-size: 24px;
     }
 }
 
-
-/* ===== SMALL MOBILE ===== */
-@media (max-width: 480px) {
+/* ==================== RESPONSIVE 480px ==================== */
+@media screen and (max-width: 480px) {
+    .header {
+        padding: 10px;
+    }
 
     .logo {
-        font-size: 18px;
+        font-size: 15px;
     }
 
-    .post-info h3 {
-        font-size: 18px;
-    }
-
-    .post-info p {
+    .search-bar input {
         font-size: 14px;
+        padding: 8px 35px 8px 15px;
+    }
+
+    .search-bar button{
+        display: none;
+    }
+
+    .logo-search {
+        right: 10px;
+    }
+
+    #mainTitle {
+        width: 90%;
+        font-size: 20px;
+        padding: 8px;
+    }
+
+    .blog-list {
+        padding: 15px;
+    }
+
+    .date h3 {
+        font-size: 16px;
+    }
+
+    .op {
+        font-size: 13px;
+    }
+
+    .name-content button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .pagination {
+        margin: 30px 0 50px;
+    }
+
+    .page-numbers span {
+        padding: 8px 12px;
+        font-size: 13px;
     }
 
     .footer {
-        padding: 50px 20px;
+        padding: 20px;
+    }
+
+    .footer-brand h1 {
+        font-size: 24px;
+    }
+
+    .footer-column h4 {
+        font-size: 15px;
+    }
+
+    .footer-column a,
+    .footer-column p {
+        font-size: 14px;
     }
 }
