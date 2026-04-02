@@ -10,7 +10,7 @@
       }
 
       header {
-          height: 60px;
+          height: 55px;
           background: white;
           border-bottom: 1px solid #ddd;
           display: flex;
@@ -33,8 +33,12 @@
 
       .container {
           display: flex;
-          padding: 30px;
+          padding: 5px 40px;
           gap: 30px;
+      }
+
+      .sidebar {
+        margin-top:35px;
       }
 
       .sidebar a {
@@ -47,8 +51,9 @@
           background: #e0ecff;
           text-decoration: none;
           color: blue;
-          margin-bottom: 15px;
+          margin-top: 18px;
           font-weight: 600;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
       }
 
 
@@ -62,42 +67,53 @@
 
       /* content */
       .content {
-          flex: 1;
-          background: #FAFAFB;
-          padding: 30px;
-          border-radius: 8px;
-      }
+    flex: 1;
+    background: #FAFAFB;
+    padding: 10px;
+    border-radius: 8px;
+    width: 85%;          /* giữ lại 85% chiều rộng (100% - 15.4%) */
+    margin-right: 7%;  /* cắt bớt 1/6.5 ở bên trái */
+}
+
 
       /* top bar */
       .top-bar {
           display: flex;
-          gap: 530px;
+          justify-content: space-between;
+          /* thay vì gap cố định */
+          align-items: center;
           margin-bottom: 25px;
       }
+
 
       .top-bar span {
           color: #7c3aed;
           font-size: 13px;
           margin-left: 10px;
+          padding: 3px 5px;
+          background:#F9F5FF;
+          border-radius: 10px;
       }
 
       .top-bar h3 {
-          padding: 15px 10px;
+          padding: 10px 14px;
           background: white;
           font-weight: 480;
+          font-size: 14px;
       }
 
       .search-box {
           border: 1px solid #ddd;
           padding: 8px 12px;
           background: white;
-          width: 350px;
+          width: 535px;
+          border: none;
       }
 
       .search-box input {
-          padding-top: 8px;
-          border: none;
+          padding-top: 3px;
           outline: none;
+          border: none;
       }
 
 
@@ -105,21 +121,55 @@
       /* table */
       table {
           width: 100%;
-      }
-
-      thead {
-          text-align: left;
+          border-collapse: collapse;
+          /* gộp đường viền cho gọn */
       }
 
       th,
       td {
-          padding: 15px;
+          padding: 8px;
+          /* giữ khoảng cách thoáng */
           border-bottom: 1px solid #eee;
+          text-align: left;
       }
 
+      /* Name dài nhất */
+      th:nth-child(1),
+      td:nth-child(1) {
+          width: 45%;
+          /* chiếm nhiều không gian nhất */
+      }
+
+      /* Status */
+      th:nth-child(2),
+      td:nth-child(2) {
+          width: 15%;
+      }
+
+      /* Email address */
+      th:nth-child(3),
+      td:nth-child(3) {
+          width: 25%;
+      }
+
+      /* Actions */
+      th:nth-child(4),
+      td:nth-child(4) {
+          width: 120px;
+          /* cố định đủ chỗ cho 2 nút */
+          text-align: center;
+          /* căn giữa nút */
+      }
+
+      .userAction button {
+          margin: 0 2px;
+          /* khoảng cách nhỏ giữa block/unblock */
+      }
+
+
+
       img {
-          vertical-align: text-bottom;
-          /* hoặc middle tuỳ ý */
+        border-radius: 50%;
       }
 
       tbody {
@@ -133,10 +183,10 @@
       }
 
       .user img {
-          width: 35px;
-          height: 35px;
-          border-radius: 50%;
+          width: 28px;
+          height: 28px;
       }
+
 
       .user span {
           color: gray;

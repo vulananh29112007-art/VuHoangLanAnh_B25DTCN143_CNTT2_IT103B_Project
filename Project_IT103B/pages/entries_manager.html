@@ -48,46 +48,54 @@
         </aside>
 
         <!-- CONTENT -->
-        <main class="content" id="content">
+<main class="content-wrapper">
 
-            <!-- TOP BAR -->
-            <div class="top-bar" id="topBar">
-                <h3 id="pageTitle">
-                    <i class="fa-solid fa-folder" id="titleIcon"></i> Manage Categories
-                </h3>
+    <!-- SEARCH SECTION -->
+    <div class="search-section">
+        <!-- SEARCH BOX -->
+        <div class="search-box" id="searchBox">
+            <i class="fa-solid fa-magnifying-glass" id="searchIcon"></i>
+            <input type="text" id="searchInput" placeholder="Search Article Categories">
+        </div>
+    </div>
 
-                <div class="search-box" id="searchBox">
-                    <i class="fa-solid fa-magnifying-glass" id="searchIcon"></i>
-                    <input type="text" id="searchInput" placeholder="Search Article Categories">
-                </div>
-            </div>
+    <!-- MANAGE CATEGORIES SECTION -->
+<div class="categories-wrapper">
+    <div class="categories-content">
+        <h3 id="pageTitle">
+            <i class="fa-solid fa-folder" id="titleIcon"></i> Manage Categories
+        </h3>
 
-            <!-- ADD CATEGORY FORM -->
-            <div class="add-category" id="addCategoryForm">
-                <label for="categoryInput" id="categoryLabel">Category Name:</label>
-                <input type="text" id="categoryInput" placeholder="Enter category name">
-                <button id="addBtn">Add Category</button>
-            </div>
+        <!-- ADD CATEGORY FORM -->
+        <div class="add-category" id="addCategoryForm">
+            <label for="categoryInput" id="categoryLabel">Category Name:</label>
+            <input type="text" id="categoryInput" placeholder="Enter category name">
+            <button id="addBtn">Add Category</button>
+        </div>
 
-            <!-- CATEGORY LIST -->
-            <div class="category-list-header" id="categoryListHeader">
-                <i class="fa-solid fa-list" id="listIcon"></i> Category List
-            </div>
+        <!-- CATEGORY LIST -->
+        <div class="category-list-header" id="categoryListHeader">
+            <i class="fa-solid fa-list" id="listIcon"></i> Category List
+        </div>
 
-            <table class="category-table" id="categoryTable">
-                <thead id="tableHead">
-                    <tr id="tableHeaderRow">
-                        <th id="colNumber">#</th>
-                        <th id="colCategoryName">Category Name</th>
-                        <th id="colActions">Actions</th>
-                    </tr>
-                </thead>
-                <tbody id="categoryBody">
-                    <!-- JavaScript sẽ thêm dữ liệu vào đây -->
-                </tbody>
-            </table>
+        <table class="category-table" id="categoryTable">
+            <thead id="tableHead">
+                <tr id="tableHeaderRow">
+                    <th id="colNumber">#</th>
+                    <th id="colCategoryName">Category Name</th>
+                    <th id="colActions">Actions</th>
+                </tr>
+            </thead>
+            <tbody id="categoryBody">
+                <!-- JavaScript sẽ thêm dữ liệu vào đây -->
+            </tbody>
+        </table>
+    </div>
+</div>
 
-        </main>
+</main>
+
+
     </div>
 
 </body>

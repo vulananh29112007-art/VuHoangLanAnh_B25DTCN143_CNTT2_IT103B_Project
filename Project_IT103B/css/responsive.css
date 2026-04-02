@@ -226,146 +226,145 @@
 /* user manager */
 
 /* ===== TABLET (<= 1024px) ===== */
-@media (max-width: 1024px) {
-
-    .container {
-        flex-direction: column;
-    }
-
-    /* sidebar nằm ngang */
-    .sidebar {
-        width: 100%;
-        display: flex;
-        gap: 10px;
-        overflow-x: auto;
-        padding: 10px;
-    }
-
-    .sidebar button {
-        flex: 1;
-        white-space: nowrap;
-    }
-
-    .content {
-        padding: 20px;
-    }
-
-    .top-bar {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-
-    .search-box {
-        width: 100%;
-    }
-
-    .search-box input {
-        width: 100%;
-    }
+@media (max-width: 1023px) and (min-width: 768px) {
+  .sidebar a {
+    font-size: 13px;
+    padding: 8px;
+  }
+  .search-box {
+    width: 300px;
+  }
+  #userTable th:nth-child(3),
+  #userTable td:nth-child(3) {
+    display: none; /* Ẩn cột Email */
+  }
 }
+
+
 
 
 /* ===== MOBILE (<= 768px) ===== */
-@media (max-width: 768px) {
-
-    /* HEADER */
-    header {
-        padding: 10px;
-    }
-
-    .top-right {
-        justify-content: flex-end;
-        gap: 10px;
-    }
-
-    /* ẨN HEADER TABLE */
-    table thead {
-        display: none;
-    }
-
-    /* TABLE → CARD */
-    table,
-    tbody,
-    tr,
-    td {
-        display: block;
-        width: 100%;
-    }
-
-    tr {
-        background: #fff;
-        margin-bottom: 15px;
-        border-radius: 8px;
-        padding: 10px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-
-    td {
-        padding: 5px 0;
-        border: none;
-    }
-
-    /* thêm label giả */
-    td::before {
-        font-weight: bold;
-        display: block;
-        margin-bottom: 3px;
-        color: #666;
-    }
-
-    td:nth-child(1)::before { content: "Name"; }
-    td:nth-child(2)::before { content: "Status"; }
-    td:nth-child(3)::before { content: "Email"; }
-    td:nth-child(4)::before { content: "Actions"; }
-
-    /* user info */
-    .user {
-        flex-direction: row;
-        align-items: center;
-    }
-
-    /* pagination */
-    .pagination {
-        flex-direction: column;
-        gap: 10px;
-    }
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .sidebar {
+    display: none; /* Ẩn sidebar */
+  }
+  .search-box {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  #userTable,
+  #userTable thead {
+    display: none; /* Ẩn bảng */
+  }
+  #tableBody tr {
+    display: block;
+    margin-bottom: 15px;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  #tableBody td {
+    display: block;
+    border: none;
+    padding: 5px 0;
+  }
+  #tableBody td::before {
+    content: attr(id);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 3px;
+  }
 }
+
+
 
 
 /* ===== SMALL MOBILE (<= 480px) ===== */
 @media (max-width: 480px) {
+  .container {
+    flex-direction: column;
+    padding: 8px;
+    gap: 15px;
+  }
 
-    .top-bar h3 {
-        font-size: 16px;
-    }
+  .sidebar {
+    display: none; /* Ẩn sidebar */
+  }
 
-    .top-bar span {
-        font-size: 12px;
-    }
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
 
-    .sidebar button {
-        font-size: 13px;
-        padding: 8px;
-    }
+  .search-box {
+    width: 100%;
+    margin-top: 10px;
+  }
 
-    .search-box input {
-        font-size: 14px;
-    }
+  /* Ẩn bảng, chuyển sang card */
+  #userTable,
+  #userTable thead {
+    display: none;
+  }
 
-    .user img {
-        width: 30px;
-        height: 30px;
-    }
+  #tableBody tr {
+    display: block;
+    margin-bottom: 12px;
+    background: white;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
 
-    .user p {
-        font-size: 14px;
-    }
+  #tableBody td {
+    display: block;
+    border: none;
+    padding: 4px 0;
+  }
 
-    .user span {
-        font-size: 12px;
-    }
+  /* Avatar + tên hiển thị to hơn */
+  .user img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .user p {
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .user span {
+    font-size: 13px;
+    color: #666;
+  }
+
+  /* Nút hành động full width */
+  .block, .unblock {
+    width: 100%;
+    height: 32px;
+    margin-top: 6px;
+    font-size: 14px;
+  }
+
+  /* Pagination co lại */
+  .pagination {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .pages {
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
+
 
 
 

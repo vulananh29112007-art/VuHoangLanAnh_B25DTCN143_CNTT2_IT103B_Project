@@ -1,4 +1,4 @@
- * {
+* {
           margin: 0;
           padding: 0;
           box-sizing: border-box;
@@ -10,7 +10,7 @@
       }
 
       header {
-          height: 60px;
+          height: 55px;
           background: white;
           border-bottom: 1px solid #ddd;
           display: flex;
@@ -31,14 +31,16 @@
           border-radius: 50%;
       }
 
-      /* Container */
       .container {
           display: flex;
-          padding: 30px;
+          padding: 5px 40px;
           gap: 30px;
       }
 
-      /* Sidebar */
+      .sidebar {
+        margin-top:35px;
+      }
+
       .sidebar a {
           display: flex;
           align-items: center;
@@ -49,15 +51,11 @@
           background: #e0ecff;
           text-decoration: none;
           color: blue;
-          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-          margin-bottom: 15px;
+          margin-top: 18px;
           font-weight: 600;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
       }
 
-      /* hover */
-      .sidebar a:hover {
-          background: #c7dbff;
-      }
 
       /* icon */
       .sidebar i {
@@ -67,122 +65,118 @@
           border: 1px solid orange;
       }
 
-      /* Content */
-      .content {
-          flex: 1;
-          background: white;
-          padding: 30px;
-          border-radius: 8px;
-      }
+      /* Wrapper để phân biệt search và content */
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* khoảng cách giữa search và manage categories */
+    flex: 1;
+    margin: 27px;
+}
 
-      /* Top Bar */
-      .top-bar {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          margin-bottom: 25px;
-      }
+/* Search section riêng biệt */
+.search-section {
+    background: white;
+    padding: 8px 12px;
+    margin-left: 340px;
+    width: 630px;
+}
 
-      .top-bar h3 {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          font-size: 20px;
-      }
+/* Search box */
+.search-box {
+    display: flex;
+    gap: 10px;
+}
 
-      /* Search Box */
-      .search-box {
-          border: 1px solid #ddd;
-          padding: 8px 12px;
-          border-radius: 6px;
-          display: flex;
-          align-items: center;
-          gap: 8px;
-      }
 
-      .search-box input {
-          border: none;
-          outline: none;
-          width: 250px;
-      }
+#searchInput {
+    flex: 1;
+    outline: none;
+    border: none;
+    font-size: 14px;
+}
 
-      /* Add Category Form */
-      .add-category {
-          margin-bottom: 30px;
-      }
+/* Manage Categories wrapper: khối trắng kéo dài hết */
+.categories-wrapper {
+    background: white;
+    width: 100%;       /* kéo dài hết chiều ngang */
+    padding: 0;        /* wrapper chỉ bọc ngoài */
+}
 
-      .add-category label {
-          display: block;
-          margin-bottom: 8px;
-          font-weight: 500;
-      }
+/* Nội dung bên trong categories */
+.categories-content {
+    padding: 30px;
+}
 
-      .add-category input {
-          width: 100%;
-          padding: 12px;
-          border: 1px solid #ddd;
-          border-radius: 6px;
-          margin-bottom: 15px;
-          font-size: 16px;
-      }
+/* Tiêu đề Manage Categories */
+#pageTitle {
+    display: flex;
+    justify-content: center; /* căn giữa theo chiều ngang */
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    width: 60%;              /* cùng độ rộng với form và bảng */
+}
 
-      #addBtn {
-          width: 100%;
-          padding: 12px;
-          background: #22c55e;
-          color: white;
-          border: none;
-          border-radius: 6px;
-          font-size: 16px;
-          cursor: pointer;
-      }
 
-      #addBtn:hover {
-          background: #16a34a;
-      }
+/* Form thêm category */
+.add-category {
+    margin-bottom: 18px;
+}
 
-      /* Category List Header */
-      .category-list-header {
-          font-weight: 600;
-          margin-bottom: 10px;
-          display: flex;
-          align-items: center;
-          gap: 8px;
-      }
+.add-category label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
 
-      /* Table */
-      .category-table {
-          width: 100%;
-          border-collapse: collapse;
-      }
+.add-category input {
+    width: 60%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
 
-      .category-table th,
-      .category-table td {
-          padding: 15px;
-          border-bottom: 1px solid #eee;
-          text-align: left;
-      }
+#addBtn {
+    width: 60%;
+    padding: 12px;
+    background: #22c55e;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
 
-      .category-table th {
-          background: #f8f9fa;
-          font-weight: 500;
-      }
+#addBtn:hover {
+    background: #16a34a;
+}
 
-      .empty-row {
-          text-align: center;
-          padding: 50px 20px !important;
-          color: #888;
-          font-style: italic;
-      }
+/* Bảng category */
+.category-list-header {
+    font-weight: 600;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
 
-      /* Responsive */
-      @media (max-width: 768px) {
-          .container {
-              padding: 15px;
-              gap: 15px;
-          }
+.category-table {
+    width: 60%;
+}
 
-          .content {
-              padding: 20px;
-          }
-      }
+.category-table th,
+.category-table td {
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+
+.category-table th {
+    background: #F4F4F4;
+    font-weight: 500;
+}

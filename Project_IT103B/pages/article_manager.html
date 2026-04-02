@@ -13,29 +13,35 @@
 <body>
 
     <!-- HEADER -->
-    <header>
-        <div class="top-right">
-            <i class="fa-regular fa-envelope"></i>
-            <i class="fa-regular fa-bell"></i>
-            <img src="https://i.pravatar.cc/40" alt="Avatar">
+    <header id="header">
+        <div class="top-right" id="topRight">
+            <i class="fa-regular fa-envelope" id="iconMail"></i>
+            <i class="fa-regular fa-bell" id="iconBell"></i>
+            <img src="https://i.pravatar.cc/40" alt="" id="avatar">
         </div>
     </header>
 
+    <!-- ================= MAIN CONTAINER ================= -->
     <div class="container">
-        <!-- SIDEBAR -->
-        <aside class="sidebar">
-            <a href="../pages/user_manager.html">
+        <!-- ===== SIDEBAR ===== -->
+        <aside class="sidebar" id="sidebar">
+
+            <a href="../pages/user_manager.html" id="btnUsers">
                 <i class="fa-solid fa-users"></i> Manage Users
             </a>
-            <a href="../pages/entries_manager.html">
+
+            <a href="../pages/entries_manager.html" id="btnEntries">
                 <i class="fa-solid fa-table-list"></i> Manage Entries
             </a>
-            <a href="../pages/article_manager.html" class="active">
+
+            <a href="../pages/article_manager.html" id="btnArticles">
                 <i class="fa-solid fa-newspaper"></i> Manage Article
             </a>
-            <a href="../pages/login.html">
+
+            <a href="../pages/login.html" id="btnLogout">
                 <i class="fa-solid fa-right-from-bracket"></i> Log out
             </a>
+
         </aside>
 
         <!-- MAIN CONTENT -->
@@ -43,9 +49,7 @@
 
             <!-- Top Section: Tiêu đề và Nút Thêm (hai đầu, thẳng hàng) -->
             <div class="top-section">
-                <button class="add-btn" id="addArticleBtn">
-                    <i class="fa-solid fa-plus"></i> Thêm mới bài viết
-                </button>
+                <button class="add-btn" id="addArticleBtn">Thêm mới bài viết</button>
                 <h1 class="page-title">Quản lý bài viết</h1>
 
             </div>
@@ -105,9 +109,9 @@
 
             <!-- Pagination -->
             <div class="pagination">
-                <button class="page-btn"><i class="fa-solid fa-chevron-left"></i> Previous</button>
+                <button class="page-btn"><i class="fa-solid fa-arrow-left" style="color: rgb(5, 5, 5);"></i> &nbsp;Previous</button>
                 <div class="page-numbers">
-                    <span class="page active">1</span>
+                    <span class="page">1</span>
                     <span class="page">2</span>
                     <span class="page">3</span>
                     <span>...</span>
@@ -115,7 +119,7 @@
                     <span class="page">9</span>
                     <span class="page">10</span>
                 </div>
-                <button class="page-btn">Next <i class="fa-solid fa-chevron-right"></i></button>
+                <button class="page-btn">Next &nbsp; <i class="fa-solid fa-arrow-right" style="color: rgb(5, 5, 5);"></i></button>
             </div>
         </main>
     </div>
