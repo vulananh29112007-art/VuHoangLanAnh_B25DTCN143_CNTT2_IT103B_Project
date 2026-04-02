@@ -225,295 +225,162 @@
 
 /* user manager */
 
-/* ===== TABLET (<= 1024px) ===== */
-@media (max-width: 1023px) and (min-width: 768px) {
-  .sidebar a {
-    font-size: 13px;
-    padding: 8px;
-  }
-  .search-box {
-    width: 300px;
-  }
-  #userTable th:nth-child(3),
-  #userTable td:nth-child(3) {
-    display: none; /* Ẩn cột Email */
-  }
-}
-
-
-
-
-/* ===== MOBILE (<= 768px) ===== */
-@media (max-width: 767px) {
-  .container {
-    flex-direction: column;
-    padding: 10px;
-  }
-  .sidebar {
-    display: none; /* Ẩn sidebar */
-  }
-  .search-box {
-    width: 100%;
-    margin-bottom: 15px;
-  }
-  #userTable,
-  #userTable thead {
-    display: none; /* Ẩn bảng */
-  }
-  #tableBody tr {
-    display: block;
-    margin-bottom: 15px;
-    background: white;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  }
-  #tableBody td {
-    display: block;
-    border: none;
-    padding: 5px 0;
-  }
-  #tableBody td::before {
-    content: attr(id);
-    font-weight: bold;
-    display: block;
-    margin-bottom: 3px;
-  }
-}
-
-
-
-
-/* ===== SMALL MOBILE (<= 480px) ===== */
-@media (max-width: 480px) {
-  .container {
-    flex-direction: column;
-    padding: 8px;
-    gap: 15px;
-  }
-
-  .sidebar {
-    display: none; /* Ẩn sidebar */
-  }
-
-  .top-bar {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  .search-box {
-    width: 100%;
-    margin-top: 10px;
-  }
-
-  /* Ẩn bảng, chuyển sang card */
-  #userTable,
-  #userTable thead {
-    display: none;
-  }
-
-  #tableBody tr {
-    display: block;
-    margin-bottom: 12px;
-    background: white;
-    padding: 12px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  }
-
-  #tableBody td {
-    display: block;
-    border: none;
-    padding: 4px 0;
-  }
-
-  /* Avatar + tên hiển thị to hơn */
-  .user img {
-    width: 40px;
-    height: 40px;
-  }
-
-  .user p {
-    font-size: 15px;
-    font-weight: 600;
-  }
-
-  .user span {
-    font-size: 13px;
-    color: #666;
-  }
-
-  /* Nút hành động full width */
-  .block, .unblock {
-    width: 100%;
-    height: 32px;
-    margin-top: 6px;
-    font-size: 14px;
-  }
-
-  /* Pagination co lại */
-  .pagination {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .pages {
-    gap: 8px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
-
-
-
-
-/* entries manager */
-
-@media (max-width: 1024px) {
-    .sidebar {
-        width: 240px;
-    }
-    
-    .content {
-        padding: 25px;
-    }
-}
-
-@media (max-width: 768px) {
-    .menu-btn {
-        display: block;
-    }
-
-    .sidebar {
-        position: fixed;
-        left: -280px;
-        top: 60px;
-        bottom: 0;
-        z-index: 200;
-        box-shadow: 4px 0 15px rgba(0,0,0,0.1);
-    }
-
-    .sidebar.active {
-        left: 0;
-    }
-
+/* ===================== RESPONSIVE 1024px ===================== */
+@media screen and (max-width: 1024px) {
     .container {
-        flex-direction: column;
+        padding: 10px 20px;
+        gap: 20px;
     }
 
-    .content {
-        padding: 20px;
-        margin-top: 10px;
-    }
-
-    .search-box input {
+    .sidebar {
         width: 220px;
     }
 
-    .top-bar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .category-table th,
-    .category-table td {
-        padding: 12px 8px;
+    .sidebar a {
         font-size: 14px;
+        padding: 10px;
+    }
+
+    .content {
+        width: 100%;
+        margin-right: 0;
+        padding: 10px;
+    }
+
+    .search-box {
+        width: 320px;
+    }
+
+    th,
+    td {
+        font-size: 14px;
+        padding: 10px 6px;
+    }
+
+    .block,
+    .unblock {
+        font-size: 12px;
     }
 }
 
-@media (max-width: 480px) {
-    .search-box input {
-        width: 180px;
-    }
-    
-    .add-category input,
-    #addBtn {
-        font-size: 15px;
-        padding: 13px;
-    }
-}
 
+/* ===================== RESPONSIVE 768px ===================== */
+@media screen and (max-width: 768px) {
 
-/* article manager */
-/* ===== TABLE SCROLL (QUAN TRỌNG) ===== */
-.table-wrapper {
-    width: 100%;
-    overflow-x: auto;
-}
-
-/* ===== MOBILE ===== */
-@media (max-width: 768px) {
-
-    /* Container */
     .container {
         flex-direction: column;
+        padding: 10px;
     }
 
-    /* Sidebar */
     .sidebar {
-        display: flex;
-        flex-direction: column;
         width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
     }
 
     .sidebar a {
+        flex: 1 1 calc(50% - 10px);
         justify-content: center;
+        margin-top: 0;
     }
 
-    /* Top bar */
+    .content {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
     .top-bar {
         flex-direction: column;
         align-items: flex-start;
         gap: 15px;
     }
 
-    #addArticleBtn {
+    .search-box {
         width: 100%;
     }
 
-    /* Table */
-    .category-table {
-        min-width: 700px; /* ép scroll ngang */
-    }
-
-    /* Nội dung dài */
-    td {
-        max-width: 150px;
+    table {
+        display: block;
+        overflow-x: auto;
         white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
     }
 
-    /* Pagination */
-    #pagination {
+    th,
+    td {
+        font-size: 13px;
+    }
+
+    .pagination {
         flex-direction: column;
-        gap: 10px;
+        gap: 15px;
     }
 }
 
-/* ===== SMALL MOBILE ===== */
-@media (max-width: 480px) {
+
+/* ===================== RESPONSIVE 480px ===================== */
+@media screen and (max-width: 480px) {
 
     header {
         padding: 0 15px;
     }
 
-    .content {
-        padding: 15px;
+    .top-right {
+        gap: 12px;
+    }
+
+    .sidebar {
+        flex-direction: column;
+    }
+
+    .sidebar a {
+        width: 100%;
+        font-size: 13px;
     }
 
     .top-bar h3 {
-        font-size: 18px;
+        font-size: 13px;
+        padding: 8px;
     }
 
-    .category-table th,
-    .category-table td {
-        padding: 10px;
-        font-size: 14px;
+    .search-box {
+        width: 100%;
+        padding: 8px;
     }
 
+    .search-box input {
+        width: 80%;
+    }
+
+    th,
+    td {
+        font-size: 12px;
+        padding: 8px 4px;
+    }
+
+    .user img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .block,
+    .unblock {
+        width: auto;
+        padding: 4px 8px;
+        font-size: 11px;
+    }
+
+    .pages {
+        gap: 8px;
+        font-size: 12px;
+    }
+
+    .pagination button {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
 }
 
 

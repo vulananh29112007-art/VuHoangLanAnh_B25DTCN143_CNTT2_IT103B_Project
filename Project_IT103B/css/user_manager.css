@@ -38,7 +38,7 @@
       }
 
       .sidebar {
-        margin-top:35px;
+          margin-top: 35px;
       }
 
       .sidebar a {
@@ -67,13 +67,15 @@
 
       /* content */
       .content {
-    flex: 1;
-    background: #FAFAFB;
-    padding: 10px;
-    border-radius: 8px;
-    width: 85%;          /* giữ lại 85% chiều rộng (100% - 15.4%) */
-    margin-right: 7%;  /* cắt bớt 1/6.5 ở bên trái */
-}
+          flex: 1;
+          background: #FAFAFB;
+          padding: 10px;
+          border-radius: 8px;
+          width: 85%;
+          /* giữ lại 85% chiều rộng (100% - 15.4%) */
+          margin-right: 7%;
+          /* cắt bớt 1/6.5 ở bên trái */
+      }
 
 
       /* top bar */
@@ -91,7 +93,7 @@
           font-size: 13px;
           margin-left: 10px;
           padding: 3px 5px;
-          background:#F9F5FF;
+          background: #F9F5FF;
           border-radius: 10px;
       }
 
@@ -133,6 +135,14 @@
           text-align: left;
       }
 
+      th {
+    vertical-align: middle;
+}
+
+th img {
+    vertical-align: middle;
+}
+
       /* Name dài nhất */
       th:nth-child(1),
       td:nth-child(1) {
@@ -169,7 +179,7 @@
 
 
       img {
-        border-radius: 50%;
+          border-radius: 50%;
       }
 
       tbody {
@@ -230,4 +240,162 @@
       .pages {
           display: flex;
           gap: 15px;
+      }
+
+      /* ===================== RESPONSIVE 1024px ===================== */
+      @media screen and (max-width: 1024px) {
+          .container {
+              padding: 10px 20px;
+              gap: 20px;
+          }
+
+          .sidebar {
+              width: 220px;
+          }
+
+          .sidebar a {
+              font-size: 14px;
+              padding: 10px;
+          }
+
+          .content {
+              width: 100%;
+              margin-right: 0;
+              padding: 10px;
+          }
+
+          .search-box {
+              width: 320px;
+          }
+
+          th,
+          td {
+              font-size: 14px;
+              padding: 10px 6px;
+          }
+
+          .block,
+          .unblock {
+              font-size: 12px;
+          }
+      }
+
+
+      /* ===================== RESPONSIVE 768px ===================== */
+      @media screen and (max-width: 768px) {
+
+          .container {
+              flex-direction: column;
+              padding: 10px;
+          }
+
+          .sidebar {
+              width: 100%;
+              display: flex;
+              flex-wrap: wrap;
+              gap: 10px;
+              margin-top: 10px;
+          }
+
+          .sidebar a {
+              flex: 1 1 calc(50% - 10px);
+              justify-content: center;
+              margin-top: 0;
+          }
+
+          .content {
+              width: 100%;
+              margin: 0;
+              padding: 0;
+          }
+
+          .top-bar {
+              flex-direction: column;
+              align-items: flex-start;
+              gap: 15px;
+          }
+
+          .search-box {
+              width: 100%;
+          }
+
+          table {
+              display: block;
+              overflow-x: auto;
+              white-space: nowrap;
+          }
+
+          th,
+          td {
+              font-size: 13px;
+          }
+
+          .pagination {
+              flex-direction: column;
+              gap: 15px;
+          }
+      }
+
+
+      /* ===================== RESPONSIVE 480px ===================== */
+      @media screen and (max-width: 480px) {
+
+          header {
+              padding: 0 15px;
+          }
+
+          .top-right {
+              gap: 12px;
+          }
+
+          .sidebar {
+              flex-direction: column;
+          }
+
+          .sidebar a {
+              width: 100%;
+              font-size: 13px;
+          }
+
+          .top-bar h3 {
+              font-size: 13px;
+              padding: 8px;
+          }
+
+          .search-box {
+              width: 100%;
+              padding: 8px;
+          }
+
+          .search-box input {
+              width: 80%;
+          }
+
+          th,
+          td {
+              font-size: 12px;
+              padding: 8px 4px;
+          }
+
+          .user img {
+              width: 24px;
+              height: 24px;
+          }
+
+          .block,
+          .unblock {
+              width: auto;
+              padding: 4px 8px;
+              font-size: 11px;
+          }
+
+          .pages {
+              gap: 8px;
+              font-size: 12px;
+          }
+
+          .pagination button {
+              padding: 6px 10px;
+              font-size: 12px;
+          }
       }

@@ -142,7 +142,7 @@
       /* Status */
       .status {
           padding: 6px 14px;
-          border-radius: 20px;
+          border-radius: 5px;
           font-size: 13px;
           font-weight: 600;
       }
@@ -158,8 +158,9 @@
       }
 
       .status-select {
-          padding: 8px 12px;
+          padding: 6px 10px;
           border: 1px solid #ddd;
+          background: #EFEFEF;
           border-radius: 6px;
       }
 
@@ -193,8 +194,9 @@
       /* Pagination */
       .pagination {
           display: flex;
-          justify-content: space-between;
           align-items: center;
+          justify-content: space-evenly;
+          gap: 190px;
           margin-top: 30px;
       }
 
@@ -222,4 +224,176 @@
           color: white;
       }
 
+
+      /* ===================== FIX CHUNG ===================== */
+
+/* bỏ margin-top cứng */
+.content {
+    margin-top: 20px;
+}
+
+/* top section chuẩn flex */
+.top-section {
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* tiêu đề căn giữa đẹp hơn */
+.page-title {
+    text-align: center;
+}
+
+/* pagination gọn lại */
+.pagination {
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+
+/* ===================== RESPONSIVE 1024px ===================== */
+@media screen and (max-width: 1024px) {
+
+    .container {
+        padding: 10px 20px;
+        gap: 20px;
+    }
+
+    .sidebar {
+        width: 220px;
+    }
+
+    .sidebar a {
+        font-size: 14px;
+    }
+
+    .content {
+        margin-top: 10px;
+    }
+
+    .article-table th,
+    .article-table td {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .add-btn {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+}
+
+
+/* ===================== RESPONSIVE 768px ===================== */
+@media screen and (max-width: 768px) {
+
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    /* sidebar giống 2 trang trước */
+    .sidebar {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .sidebar a {
+        flex: 1 1 calc(50% - 10px);
+        justify-content: center;
+        margin-top: 0;
+    }
+
+    .content {
+        margin: 0;
+    }
+
+    /* top section xuống hàng */
+    .top-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .page-title {
+        text-align: left;
+    }
+
+    /* table scroll ngang */
+    .table-wrapper {
+        overflow-x: auto;
+    }
+
+    .article-table {
+        min-width: 700px;
+    }
+
+    .pagination {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+
+/* ===================== RESPONSIVE 480px ===================== */
+@media screen and (max-width: 480px) {
+
+    header {
+        padding: 0 15px;
+    }
+
+    .top-right {
+        gap: 12px;
+    }
+
+    .sidebar {
+        flex-direction: column;
+    }
+
+    .sidebar a {
+        width: 100%;
+        font-size: 13px;
+    }
+
+    .add-btn {
+        width: 100%;
+        justify-content: center;
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .page-title {
+        font-size: 18px;
+    }
+
+    .article-table th,
+    .article-table td {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .article-table img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .edit-btn,
+    .delete-btn {
+        padding: 5px 8px;
+        font-size: 12px;
+    }
+
+    .page-btn {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .page {
+        padding: 6px 8px;
+        font-size: 12px;
+    }
+}
       
