@@ -41,8 +41,28 @@ document.addEventListener("click", function (e) {
     }
 
     if (e.target.classList.contains("logout")) {
-        localStorage.removeItem("currentUser");
-        window.location.reload();
+        e.preventDefault();
+
+        Swal.fire({
+            title: "Bạn có chắc chắn đăng xuất không?",
+            icon: "question",
+            showCancelButton: true,
+            confirmButtonText: "OK"
+        }).then(res => {
+            if (res.isConfirmed) {
+                localStorage.removeItem("currentUser");
+
+                Swal.fire({
+                    icon: "success",
+                    title: "Đã đăng xuất",
+                    timer: 1000,
+                    showConfirmButton: false
+                }).then(() => {
+                    // replace → không quay lại được
+                    window.location.replace("../pages/login.html");
+                });
+            }
+        });
     }
 });
 
