@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- META -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- TITLE -->
+    <title id="pageTitle">Manage Users</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/user_manager.css" id="mainCss">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body id="body">
+
+    <!-- ================= HEADER ================= -->
+    <header id="header">
+        <div class="top-right" id="topRight">
+            <i class="fa-regular fa-envelope" id="iconMail"></i>
+            <i class="fa-regular fa-bell" id="iconBell"></i>
+            <img src="https://i.pravatar.cc/40" alt="" id="avatar">
+        </div>
+    </header>
+
+    <!-- ================= MAIN CONTAINER ================= -->
+    <div class="container" id="container">
+
+        <!-- ===== SIDEBAR ===== -->
+        <aside class="sidebar" id="sidebar">
+
+            <a href="../pages/user_manager.html" id="btnUsers">
+                <i class="fa-solid fa-users"></i> Manage Users
+            </a>
+
+            <a href="../pages/entries_manager.html" id="btnEntries">
+                <i class="fa-solid fa-table-list"></i> Manage Entries
+            </a>
+
+            <a href="../pages/article_manager.html" id="btnArticles">
+                <i class="fa-solid fa-newspaper"></i> Manage Article
+            </a>
+
+            <a href="../pages/login.html" id="btnLogout">
+                <i class="fa-solid fa-right-from-bracket"></i> Log out
+            </a>
+
+        </aside>
+
+        <!-- ===== CONTENT ===== -->
+        <main class="content" id="content">
+
+            <!-- TOP BAR -->
+            <div class="top-bar" id="topBar">
+                <h3 id="teamTitle">
+                    Team members <span id="userCount">100 users</span>
+                </h3>
+
+                <div class="search-box" id="searchBox">
+                    <i class="fa-solid fa-magnifying-glass" id="searchIcon"></i>
+                    <input type="text" id="searchInput" placeholder="Search user">
+                </div>
+            </div>
+
+            <!-- ===== TABLE ===== -->
+            <table id="userTable">
+
+                <!-- TABLE HEADER -->
+                <thead id="tableHead">
+                    <tr id="tableHeaderRow">
+                        <th style = "cursor:pointer;" id="colName">Name &nbsp;<img src="../assets/images/A to Z.png"></th>
+                        <th id="colStatus">Status &nbsp; <i class="fa-solid fa-arrow-down"
+                                style="color: rgb(5, 5, 5);"></i></th>
+                        <th id="colEmail">Email address</th>
+                        <th id="colAction">Actions</th>
+                    </tr>
+                </thead>
+
+                <!-- TABLE BODY -->
+                <tbody id="tableBody">
+
+                </tbody>
+            </table>
+
+            <!-- ===== PAGINATION ===== -->
+            <div class="pagination" id="pagination">
+
+                <button id="prevBtn"><i class="fa-solid fa-arrow-left" style="color: rgb(5, 5, 5);"></i> &nbsp;
+                    Previous</button>
+
+                <div class="pages" id="pages">
+                    <span id="page-1">1</span>
+                    <span id="page-2">2</span>
+                    <span id="page-3">3</span>
+                    <span id="dots">...</span>
+                    <span id="page-10">10</span>
+                </div>
+
+                <button id="nextBtn">Next &nbsp; <i class="fa-solid fa-arrow-right"
+                        style="color: rgb(5, 5, 5);"></i></button>
+            </div>
+
+        </main>
+    </div>
+<script type="module" src="../js/user_manager.js"></script>
+
+</body>
+
+</html>

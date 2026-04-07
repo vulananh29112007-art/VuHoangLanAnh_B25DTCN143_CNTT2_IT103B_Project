@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Article</title>
+    <link rel="stylesheet" href="../css/form.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+
+    <div class="overlay" id="overlay">
+
+        <div class="modal" id="modal">
+
+            <div class="modal-header">
+                <h2 id="title-form">📝 Add New Article</h2>
+                <span class="close-btn">
+                    <i class="fa-regular fa-circle-xmark" id="closeBtn" style="cursor:pointer;"></i>
+                </span>
+            </div>
+
+            <form id="articleForm">
+
+                <label>Title:</label>
+                <input type="text" id="title">
+
+                <label>Article Categories:</label>
+                <select id="category"></select>
+
+                <label>Mood:</label>
+                <select id="mood">
+                    <option value="happy">😊 Happy</option>
+                    <option value="sad">😢 Sad</option>
+                    <option value="cool">😎 Cool</option>
+                    <option value="sick">🤒 Sick</option>
+                    <option value="thinking">🤔 Thinking</option>
+                    <option value="crying">😭 Crying</option>
+                    <option value="sleepy">🥱 Sleepy</option>
+                </select>
+
+                <label>Content:</label>
+                <textarea id="content"></textarea>
+
+                <div class="status">
+                    <span class="status-label">Status</span>
+
+                    <label class="radio-item">
+                        <input type="radio" name="status" value="public">
+                        public
+                    </label>
+
+                    <label class="radio-item">
+                        <input type="radio" name="status" value="private">
+                        private
+                    </label>
+                </div>
+
+                <div class="upload-box" id="uploadBox">
+                    <label for="imageInput">
+                        <img src="../assets/images/upload.png" id="imagePreview">
+                        <p>Click to choose image</p>
+                    </label>
+                    <input type="file" id="imageInput" accept="image/*" style="display:none">
+                </div>
+
+                <button type="submit" id="addBtn">Add</button>
+
+            </form>
+
+        </div>
+
+    </div>
+<script src="../js/form.js"></script>
+</body>
+
+</html>
