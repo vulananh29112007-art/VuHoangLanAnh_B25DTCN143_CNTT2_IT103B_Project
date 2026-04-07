@@ -15,16 +15,16 @@ const titleForm = document.getElementById("title-form");
 
 // Danh sách ảnh
 const imageList = [
-    "/assets/images_post/1.jpg",
-    "/assets/images_post/2.jpg",
-    "/assets/images_post/3.jpg",
-    "/assets/images_post/4.jpg",
-    "/assets/images_post/5.jpg",
-    "/assets/images_post/6.jpg",
-    "/assets/images_post/7.jpg",
-    "/assets/images_post/8.jpg",
-    "/assets/images_post/9.jpg",
-    "/assets/images_post/10.jpg"
+    "../assets/images_post/index1.jpg",
+    "../assets/images_post/index2.jpg",
+    "../assets/images_post/index3.jpg",
+    "../assets/images_post/index4.jpg",
+    "../assets/images_post/index5.jpg",
+    "../assets/images_post/index6.jpg",
+    "../assets/images_post/index7.jpg",
+    "../assets/images_post/index8.jpg",
+    "../assets/images_post/index9.jpg",
+    "../assets/images_post/index10.jpg"
 ];
 
 // ================== LOAD DATA ==================
